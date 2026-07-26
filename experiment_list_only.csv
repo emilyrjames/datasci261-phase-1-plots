@@ -1,0 +1,16 @@
+﻿Experiment,Parent Reference,Model,Loss Function,Task,Feature Set,Feature Count,Training Data,Number of trials,Search Method,Optimization metric,Validation Method,Compute
+E01,,Logistic Regression,"Log loss, w/ ElasticNet regularization",Multiclass,base 15,15,2015 September (1m),1,,,,driver
+E02,E01,Logistic Regression,Log loss,Multiclass,base 15,15,Q1 Q2 2015,1,,,,driver
+E03,E01,XGBoost,Focal loss,Multiclass,base 15,15,2015 September (1m),5,,,,driver
+E04,E01,XGBoost,Focal loss,Multiclass,base 15 +  graph + prior 60m + weather delta,45,3 mo Q1 2015,100,Optuna TPE,macro F2,,driver
+E05,E01,LightGBM,Focal loss,Multiclass,base 15 +  graph + prior 60m + weather delta,45,3 mo Q1 2015,5,Optuna TPE,macro F2,,driver
+E06,E01,XGBoost,Weighted cross entropy,Binary,base 15 +  graph + prior 60m + weather delta,45,3 mo Q1 2015,1,,,,2 Workers
+E07,E01,XGBoost,Weighted cross entropy,Multiclass,base 15 +  graph + prior 60m + weather delta,45,3 mo Q1 2015,1,,,,2 Workers
+E08,,XGBoost,Focal loss,Binary,base 15 +  graph + prior 60m + weather delta,45,3 mo Q1 2015,100,Optuna TPE,macro F2,,driver
+E09,,LightGBM,Focal loss,Binary,base 15 +  graph + prior 60m + weather delta,45,3 mo Q1 2015,5,Optuna TPE,macro F2,,driver
+E10,,Logistic Regression,Log loss,Binary,base 15 + prior 60m + weather delta (no graph),39,1 yr Q1 to Q3 2015,1,,,2015 Q4 holdout,2 Workers
+E11,E01,Logistic Regression,Log loss,Multiclass,base 15 + prior 60m + weather delta (no graph),39,1 yr Q1 to Q3 2015,1,,,,2 Workers
+E12,E01,XGBoost,Weighted cross entropy,Binary,base 15 +  graph + prior 60m + weather delta,45,1 yr Q1 to Q3 2015,1,,,,2 Workers
+E13,E01,XGBoost,Weighted cross entropy,Multiclass,base 15 +  graph + prior 60m + weather delta,45,1 yr Q1 to Q3 2015,1,,,,2 Workers
+E14,E12,XGBoost,Focal loss,Binary,base 15 +  graph + prior 60m + weather delta,45,1 yr Q1 to Q3 2015,100,Optuna TPE,macro F2,2015 Q4 holdout,driver
+E15,,LSTM,Focal loss,Binary,base 15 +  graph + prior 60m + weather delta,45,1 yr Q1 to Q3 2015,10,Optuna TPE,macro F2,2015 Q4 holdout,2 Workers

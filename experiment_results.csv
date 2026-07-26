@@ -1,0 +1,21 @@
+﻿Experiment,Model,Loss Function,Task,Train Data,Test Data,Best train weighted F2,Best train macro F2,Best train F2 by class,Best model hyperparameters,Best model training time,Blind test weighted F2,Blind test macro F2,Blind test F2 by class,Train/Test weighted F2 difference,Train/Test macro F2 difference
+E10,Logistic Regression,Log loss,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.6393,,,,80 s,,,,,
+E12,XGBoost,Weighted cross entropy,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.8315,0.5979,0.9046 | 0.2912,,270 s,,,,,
+E14,XGBoost,Focal loss,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.8028,0.611,0.862 | 0.359,"alpha = 0.914
+colsample_bytree = 0.641
+gamma c0 = 1.30
+gamma c1 = 0.547
+learning rate = 0.04
+max_depth = 11
+min_child_weight = 17.96
+n_estimators = 277
+subsample = 0.888",242 s,0.688,0.6198,0.7203 | 0.5193,-0.1148,0.0088
+E15,LSTM,Focal loss,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.859,0.4984,0.971 | 0.026,"alpha = 0.3745
+gamma c0 = 13.487
+gamma c1 = 6.320
+k = 5
+hidden = 32
+layers = 2
+learning rate = 0.0002
+batch size = 8192
+epochs = 9",1320 s,,,,,
