@@ -8,8 +8,24 @@ E06,E01,,XGBoost weighted cross entropy Diogo 3m Binary,Binary,base 15 graph pri
 E07,E01,,XGBoost weighted cross entropy Diogo 3m Multiclass,Multiclass,base 15 graph prior 60m weather delta,45,3 mo Q1 2015,,2 Workers,281.6 s,0.6965,0.3405,0.8023 | 0.2912 | 0.1807 | 0.0878,,,,,multiclass task 4 classes PySpark Scaling via XGBClassifier but only with Weighted CrossEntropy
 E08,,,XGBoost focal HPO winner binary,Binary,base 15 graph prior 60m weather delta,45,3 mo Q1 2015,100,driver,148 s,0.774,0.639,0.845 | 0.433,,,,,best binary 100 trial TPE trial 77 c1 delayed 15 min or more
 E09,,,LightGBM focal binary smoke,Binary,base 15 graph prior 60m weather delta,45,3 mo Q1 2015,5,driver,103 s,0.802,0.502,0.960 | 0.044,,,,,5 trial smoke majority corner solution
-E10,E01,,XGBoost weighted cross entropy Diogo 1y Binary,Binary,base 15 graph prior 60m weather delta,45,1 yr Q1 to Q3 2015,,2 Workers,270.1 s,0.8315,0.5979,0.9046 | 0.2912,,,,,binary task 2 classes PySpark Scaling via XGBClassifier but only with Weighted CrossEntropy
-E11,E01,,XGBoost weighted cross entropy Diogo 1y Multiclass,Multiclass,base 15 graph prior 60m weather delta,45,1 yr Q1 to Q3 2015,,2 Workers,832.1 s,0.7705,0.3209,0.86 | 0.1935 | 0.1316 | 0.0985,,,,,multiclass task 4 classes PySpark Scaling via XGBClassifier but only with Weighted CrossEntropy
+E10,E01,,XGBoost weighted cross entropy Diogo 1y Binary,Binary,base 15 graph prior 60m weather delta,45,1 yr Q1 to Q3 2015,,2 Workers,270.1 s,0.8315,0.5979,0.9046 | 0.2912,"alpha = [1.2656336, 4.7645845]
+colsample_bytree = 0.8
+gamma c0 = 1.30
+gamma c1 = 0.547
+learning rate = 0.019
+max_depth = 10
+min_child_weight = 16.75
+n_estimators = 242
+subsample = 0.8",0.758,0.6494,0.8315 | 0.4672,binary task 2 classes PySpark Scaling via XGBClassifier but only with Weighted CrossEntropy
+E11,E01,,XGBoost weighted cross entropy Diogo 1y Multiclass,Multiclass,base 15 graph prior 60m weather delta,45,1 yr Q1 to Q3 2015,,2 Workers,832.1 s,0.7705,0.3209,0.86 | 0.1935 | 0.1316 | 0.0985,"alpha =[ 1.243993 , 9.020743, 15.794467, 45.52063 ]
+colsample_bytree = 0.8
+gamma c0 = 1.30
+gamma c1 = 0.547
+learning rate = 0.019
+max_depth = 10
+min_child_weight = 16.75
+n_estimators = 242
+subsample = 0.9",0.673,0.3596,0.7817 | 0.2513 | 0.2172 | 0.1883,multiclass task 4 classes PySpark Scaling via XGBClassifier but only with Weighted CrossEntropy
 E12,E10,*,XGBoost focal HPO 1 yr binary,Binary,base 15 graph prior 60m weather delta,45,1 yr Q1 to Q3 2015,100,driver,242 s,0.8028,0.611,0.862 | 0.359,"alpha = 0.914
 colsample_bytree = 0.641
 gamma c0 = 1.30
@@ -20,5 +36,5 @@ min_child_weight = 17.96
 n_estimators = 277
 subsample = 0.888",0.688,0.6198,0.7203 | 0.5193,best trial 51 held through later attempts 1.30 0.55 the 3m optimum rung stable focal geometry a t 0.91 277 trees lr 0.036 depth 11 crash recovered via MLflow reseed
 E13,,,LSTM focal HPO 1 yr binary,Binary,base 15 graph prior 60m weather delta,45,1 yr Q1 to Q3 2015,10,2 Workers,1320 s,0.859,0.4984,0.971 | 0.026,,,,,first attempt at LSTM
-E14,,,LogReg 1 year w Feature Engineering Binary,Binary,base 15 prior 60m weather delta (no graph),39,1 yr Q1 to Q3 2015,1,2 Workers,79.6 s,0.6393,,,,,,,"Logistic Regression with all engineered Features, binary"
-E15,E01,,LogReg 1 year w Feature Engineering MultiClass,Multiclass,base 15 prior 60m weather delta (no graph),39,1 yr Q1 to Q3 2015,1,2 Workers,121.2 s,0.3327,,,,,,,
+E14,,,LogReg 1 year w Feature Engineering Binary,Binary,base 15 prior 60m weather delta (no graph),39,1 yr Q1 to Q3 2015,1,2 Workers,79.6 s,0.712,0.6393,0.7509 | 0.5277,LearningRate = 0.01,0.6726,0.6307,0.7873 |0.4742,"Logistic Regression with all engineered Features, binary"
+E15,E01,,LogReg 1 year w Feature Engineering MultiClass,Multiclass,base 15 prior 60m weather delta (no graph),39,1 yr Q1 to Q3 2015,1,2 Workers,121.2 s,0.596,0.3327, 0.6862 |0.2595 |0.1973 | 0.1877,LearningRate = 0.02,0.6138,0.3327, 0.7226 | 0.2152 | 0.2263 |0.1666,"Logistic Regression with all engineered Features except graphs, multiclass"
