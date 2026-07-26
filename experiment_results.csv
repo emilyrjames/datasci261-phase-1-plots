@@ -1,7 +1,6 @@
-﻿Experiment,Model,Loss Function,Task,Train Data,Test Data,Best train weighted F2,Best train macro F2,Best train F2 by class,Best model hyperparameters,Best model training time,Blind test weighted F2,Blind test macro F2,Blind test F2 by class,Train/Test weighted F2 difference,Train/Test macro F2 difference
-E10,Logistic Regression,Log loss,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.6393,,,,80 s,,,,,
-E12,XGBoost,Weighted cross entropy,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.8315,0.5979,0.9046 | 0.2912,,270 s,,,,,
-E14,XGBoost,Focal loss,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.8028,0.611,0.862 | 0.359,"alpha = 0.914
+﻿Experiment,Model,Loss Function,Task,Train Data,Test Data,Best train weighted F2,Best train macro F2,Best train F2 by class (C0 | C1),Best model hyperparameters,Best model training time,Test weighted F2,Test macro F2,Test F2 by class (C0 | C1),Train/Test weighted F2 difference,Train/Test macro F2 difference
+E10,Logistic Regression,Log loss,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.6393,0.6393,0.7509 | 0.5277,learning rate = 0.01,80 s,0.6726,0.6307,0.7873 |0.4742,0.0333,-0.0086
+E12,XGBoost,Focal loss,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.8028,0.611,0.862 | 0.359,"alpha = 0.914
 colsample_bytree = 0.641
 gamma c0 = 1.30
 gamma c1 = 0.547
@@ -10,6 +9,7 @@ max_depth = 11
 min_child_weight = 17.96
 n_estimators = 277
 subsample = 0.888",242 s,0.688,0.6198,0.7203 | 0.5193,-0.1148,0.0088
+E13,XGBoost,Weighted cross entropy,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.8315,0.5979,0.9046 | 0.2912,inherited from E12,270 s,0.758,0.6494,0.8315 | 0.4672,-0.0735,0.0515
 E15,LSTM,Focal loss,Binary,1 yr Q1 to Q3 2015,Q4 2015,0.859,0.4984,0.971 | 0.026,"alpha = 0.3745
 gamma c0 = 13.487
 gamma c1 = 6.320
@@ -18,4 +18,4 @@ hidden = 32
 layers = 2
 learning rate = 0.0002
 batch size = 8192
-epochs = 9",1320 s,,,,,
+epochs = 9",1320 s,TBD,TBD,TBD,TBD,TBD
