@@ -1,4 +1,4 @@
-Experiment,Parent Reference,Model loss function,Classification Task,Feature set,Feature Count,Development dataset,CV Weighted F2,Blind test weighted F2,Compute,Train Time,CV macro F2,CV F2 by class,Notes
+Experiment,Parent Reference,Model loss function,Classification Task,Feature set,Feature Count,Development dataset,Train CV Weighted F2,Blind test weighted F2,Compute,Train Time,CV macro F2,CV F2 by class,Notes
 E01,,LogReg elastic net weighted rp 0.1,Multiclass,time weather carrier,15,15 Sep,0.521,,,,0.247,"0.573 0.171 0.149 0.093",linear baseline
 E02,E01,LogReg weighted centralized 14,Multiclass,time weather carrier,15,Q1 Q2 fold,0.592,,,,0.297,"0.687 0.260 0.130 0.110",best LR macro different fold
 E03,E01,XGBoost focal inv 0.5 2,Multiclass,v3 numeric block,,15 Sep,0.8,,,,0.299,"0.899 0.125 0.118 0.055",hand tuned focal champion Sept
