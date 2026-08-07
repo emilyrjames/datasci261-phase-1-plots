@@ -1,7 +1,8 @@
 ﻿Experiment,Model,Loss Function,Task,Train Data,Test Data,Train time,Average minority cross-validated F2 (2015-2018),Standard deviation minority cross-validated F2 (2015-2018),Holdout weighted F2 (2019),Holdout macro F2 (2019),Holdout majority F2 (2019),Holdout minority F2 (2019),Train/test minority F2 difference
-E10,Logistic Regression,Log loss (learning rate = 0.01),Binary,Q1 to Q3 2015,Q4 2015,80 s,0.6393,0.6393,0.7509 | 0.5277,0.6726,0.6307,0.7873 | 0.4742,-0.0086
-E13,XGBoost,"Weighted cross entropy (alpha = 0.914, colsample_bytree = 0.641, gamma c0 = 1.30, gamma c1 = 0.547, learning rate = 0.04, max_depth = 11, min_child_weight = 17.96, n_estimators = 277, subsample = 0.888)",Binary,Q1 to Q3 2015,Q4 2015,270 s,0.8315,0.5979,0.9046 | 0.2912,0.758,0.6494,0.8315 | 0.4672,0.0515
-E15,LSTM,"Focal loss (alpha = 0.3745, gamma c0 = 13.487, gamma c1 = 6.320, k = 5, hidden = 32, layers = 2, learning rate = 0.0002, batch size = 8192, epochs = 9)",Binary,Q1 to Q3 2015,Q4 2015,1320 s,0.859,0.4984,0.971 | 0.026,TBD,TBD,TBD,TBD
+E10,Logistic Regression,Log loss (learning rate = 0.01),Binary,1 yr Q1 to Q3 2015,Q4 2015,80 s,N/A,N/A,0.6726,0.6307,0.7873,0.4742,-0.0535
+E12,XGBoost,"Focal loss (alpha = 0.914, colsample_bytree = 0.641, gamma c0 = 1.30, gamma c1 = 0.547, learning rate = 0.04, max_depth = 11, min_child_weight = 17.96, n_estimators = 277, subsample = 0.888)",Binary,1 yr Q1 to Q3 2015,Q4 2015,242 s,N/A,N/A,0.688,0.6198,0.7203,0.5193,0.1603
+E13,XGBoost,Weighted cross entropy (inherited from E12),Binary,1 yr Q1 to Q3 2015,Q4 2015,270 s,N/A,N/A,0.758,0.6494,0.8315,0.4672,0.1760
+E15,LSTM,"Focal loss (alpha = 0.3745, gamma c0 = 13.487, gamma c1 = 6.320, k = 5, hidden = 32, layers = 2, learning rate = 0.0002, batch size = 8192, epochs = 9)",Binary,1 yr Q1 to Q3 2015,Q4 2015,1320 s,N/A,N/A,TBD,TBD,TBD,TBD,TBD
 E20,"LSTM (torch, MDS streaming)","Focal loss (per-class gamma, alpha from stream priors)",Binary,2015 to 2018 (expanding CV),2019,4127 s,0.5175,0.03,0.7484,0.663,0.7992,0.5269,0.0094
 E22,MLP 1 layer,Cross entropy loss,Binary,2015 to 2018 (expanding CV),2019,174.6 s,0.5742,0.02,0.7505,0.6859,0.7878,0.5841,0.0099
 E23,MLP 2 layers,Cross entropy loss,Binary,2015 to 2018 (expanding CV),2019,367.9 s,0.5741,0.02,0.7572,0.6891,0.7966,0.5817,0.0076
