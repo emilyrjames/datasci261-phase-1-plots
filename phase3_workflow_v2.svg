@@ -1,0 +1,306 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2220" height="1810" viewBox="0 0 2220 1810" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="mGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a4a4a"/>
+    </marker>
+    <marker id="mDash" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#999999"/>
+    </marker>
+    <marker id="mBrown" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L12,6 L0,12 z" fill="#b5762a"/>
+    </marker>
+  </defs>
+  <style>
+    text{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;}
+    .title{font-size:30px;font-weight:700;fill:#1a1a1a}
+    .sub{font-size:14px;fill:#555}
+    .bt{font-size:15.5px;font-weight:700;letter-spacing:.2px}
+    .b{font-size:12.8px;fill:#2b2b2b}
+    .bp{font-size:12.3px;fill:#2b2b2b}
+    .bi{font-size:12.3px;font-style:italic;fill:#8a5a1e}
+    .big{font-size:12.3px;font-style:italic;fill:#666}
+    .lbl{font-size:11.5px;fill:#777}
+    .hdr{font-size:16px;font-weight:700;fill:#ffffff}
+    .hdr2{font-size:12.5px;font-weight:600;fill:#ffffff}
+    .pill{font-size:10.5px;font-weight:700;letter-spacing:.6px}
+    .stripT{font-size:13.5px;font-weight:700;fill:#8a6d1a;letter-spacing:.3px}
+    .stripB{font-size:13px;fill:#6b5a23}
+    .legend{font-size:12.5px;fill:#444}
+    .orlbl{font-size:13px;font-weight:700;fill:#8a5a1e;letter-spacing:.4px}
+  </style>
+
+  <rect x="0" y="0" width="2220" height="1810" fill="#ffffff"/>
+
+  <!-- ===================== TITLE ===================== -->
+  <text x="30" y="48" class="title">Phase 3 Workflow — OTPW Flight Departure Delay Prediction</text>
+  <text x="30" y="78" class="sub">Deep pipeline view — expands the "PHASE 3 — FINE-TUNING" box of the Phase 2 sheet · binary task (delayed &#8805; 15 min) · expanding year-fold CV · MosaicML streaming (MDS) · blind consumed once</text>
+
+  <!-- ===================== LEGEND ===================== -->
+  <line x1="1520" y1="40" x2="1568" y2="40" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+  <text x="1578" y="44" class="legend">data flow</text>
+  <line x1="1700" y1="40" x2="1748" y2="40" stroke="#999" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#mDash)"/>
+  <text x="1758" y="44" class="legend">control / iterate</text>
+  <line x1="1520" y1="66" x2="1568" y2="66" stroke="#b5762a" stroke-width="6" marker-end="url(#mBrown)"/>
+  <text x="1578" y="70" class="legend">phase hand-off</text>
+  <rect x="1700" y="56" width="112" height="20" rx="10" fill="#fdf3e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="1756" y="70" class="pill" fill="#8a5a1e" text-anchor="middle">SINGLE DRIVER</text>
+  <rect x="1830" y="56" width="104" height="20" rx="10" fill="#e9eefb" stroke="#3f5fa9" stroke-width="1.4"/>
+  <text x="1882" y="70" class="pill" fill="#2f4d92" text-anchor="middle">DISTRIBUTED</text>
+
+  <!-- ===================== ROW A ===================== -->
+  <!-- 7 ENTRY -->
+  <rect x="140" y="120" width="370" height="235" rx="10" fill="#f4f4f4" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="158" y="150" class="bt" fill="#555">7 · ENTRY — FROM PHASE 2</text>
+  <text x="158" y="178" class="b">• champion baseline + focal design — module 5</text>
+  <text x="158" y="197" class="b">• F2 (&#946; = 2) contract + experiment table — module 6</text>
+  <text x="158" y="216" class="b">• feature stores: 1y graph + time · 5y 2015&#8211;2018</text>
+  <text x="158" y="235" class="b">• blind stores: Q4 2015 (1y) · 2019 (5y) — LOCKED</text>
+  <text x="158" y="254" class="b">• team_focal v1.5 — imported, never copied</text>
+  <text x="158" y="286" class="big">this sheet expands the dashed</text>
+  <text x="158" y="303" class="big">"PHASE 3 — FINE-TUNING" box, same style</text>
+
+  <line x1="45" y1="237" x2="132" y2="237" stroke="#b5762a" stroke-width="6" marker-end="url(#mBrown)"/>
+  <text x="38" y="215" class="lbl">from Phase 2 —</text>
+  <text x="38" y="229" class="lbl">champion baseline</text>
+
+  <!-- 8 CONFIG & GO GATE -->
+  <rect x="560" y="120" width="400" height="235" rx="10" fill="#eaf3e2" stroke="#74a054" stroke-width="2"/>
+  <text x="578" y="150" class="bt" fill="#4e7a34">8 · CONFIG &amp; GO GATE</text>
+  <text x="578" y="178" class="b">• CONFIG echo — STAGE 3m | 1y | 5y · TASK = binary (C = 2)</text>
+  <text x="578" y="197" class="b">• MODELS · N_TRIALS · STUDY_TAG (_xcv appended in CV mode)</text>
+  <text x="578" y="216" class="b">• DRIVING_METRIC = f2_c1, guarded by C0_FLOOR = 0.80</text>
+  <text x="578" y="235" class="b">• USE_EXPANDING_CV · STREAM_PROPORTIONS · RUN_BLIND</text>
+  <text x="578" y="254" class="b">• CONFIRM_RUN = True only after echo review — armed</text>
+  <text x="578" y="286" class="bi" fill="#4e7a34">one knob per decision — nothing hidden downstream;</text>
+  <text x="578" y="303" class="bi" fill="#4e7a34">clearing this gate arms the studies</text>
+
+  <!-- 9 DATASTAGE -->
+  <rect x="1010" y="120" width="520" height="235" rx="10" fill="#f9ecd9" stroke="#b5762a" stroke-width="2"/>
+  <text x="1028" y="150" class="bt" fill="#8a5a1e">9 · DATASTAGE — LOAD · REPAIR · TARGET · SPLIT</text>
+  <text x="1028" y="178" class="b">• Delta load &#8594; weather string repair (T / VRB &#8594; numeric)</text>
+  <text x="1028" y="197" class="b">• _ensure_target — BINARY delay_class: delayed &#8805; 15 min;</text>
+  <text x="1042" y="216" class="b">nulls (cancellations) dropped</text>
+  <text x="1028" y="235" class="b">• leak-free time split train &#60; val_start &#8804; val — or year folds (11)</text>
+  <text x="1028" y="254" class="b">• TRAIN-only artifacts: indexer · medians · &#956;/&#963; · focal priors · &#957;</text>
+  <text x="1028" y="273" class="b">• sequence axis TAIL_NUM on the UTC spine — P(delay | prev</text>
+  <text x="1042" y="292" class="b">leg delayed) = 0.49 vs 0.12 base</text>
+  <text x="1028" y="322" class="bi">one unit owns the target definition — plates stay task-blind</text>
+
+  <!-- 10 STUDY RUNNER -->
+  <rect x="1580" y="120" width="590" height="235" rx="10" fill="#f9ecd9" stroke="#b5762a" stroke-width="2"/>
+  <text x="1598" y="150" class="bt" fill="#8a5a1e">10 · STUDY RUNNER — ORCHESTRATION</text>
+  <text x="1598" y="178" class="b">• OPTIMIZATION PLATFORMS — Optuna: one study per variant,</text>
+  <text x="1612" y="197" class="b">hpo_{stage}_{variant}_{tag} · TPE (multivariate, group) + Hyperband</text>
+  <text x="1612" y="216" class="b">Hyperopt: Log Reg + XGBoost lanes — works with MLlib out of the box</text>
+  <text x="1598" y="235" class="b">• SQLite on /local_disk0 (ephemeral) &#8646; auto-restore newest team sync</text>
+  <text x="1598" y="254" class="b">• MLflow: study parent run &#8594; nested trial runs (live curves)</text>
+  <text x="1598" y="273" class="b">• driving value: f2_c1 &#215; min(1, f2_c0 / 0.80) — macro F2 selectable</text>
+  <text x="1598" y="305" class="bi">trials run sequentially — exactly one process owns the store</text>
+
+  <!-- row A arrows -->
+  <line x1="510" y1="237" x2="552" y2="237" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+  <line x1="960" y1="237" x2="1002" y2="237" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+  <line x1="1530" y1="237" x2="1572" y2="237" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+
+  <!-- verticals A -> B -->
+  <line x1="650" y1="355" x2="650" y2="392" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+  <text x="662" y="378" class="lbl">fold plan</text>
+  <line x1="1150" y1="355" x2="1150" y2="392" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+  <text x="1162" y="378" class="lbl">windows(K) · priors · &#957;</text>
+  <line x1="1760" y1="355" x2="1760" y2="392" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+  <text x="1772" y="378" class="lbl">imbalance policy per lane</text>
+
+  <!-- ===================== ROW B ===================== -->
+  <!-- 11 EXPANDING CV -->
+  <rect x="30" y="400" width="690" height="250" rx="10" fill="#eaf3e2" stroke="#74a054" stroke-width="2.5"/>
+  <text x="48" y="430" class="bt" fill="#4e7a34">11 · EXPANDING CROSS-VALIDATION — YEAR FOLDS (5y)</text>
+  <text x="48" y="458" class="b">• USE_EXPANDING_CV = True replaces the single STAGE_BOUNDS split</text>
+  <text x="48" y="481" class="b">• fold 1 — train 2015 &#8594; val 2016</text>
+  <text x="48" y="500" class="b">• fold 2 — train 2015&#8211;2016 &#8594; val 2017</text>
+  <text x="48" y="519" class="b">• fold 3 — train 2015&#8211;2017 &#8594; val 2018</text>
+  <text x="48" y="542" class="b">• each trial fits ONCE PER FOLD; the study maximizes the MEAN drive</text>
+  <text x="62" y="561" class="b">value across folds — folds cut on YEAR, not the UTC spine</text>
+  <text x="48" y="584" class="b">• fold 4 (train 2015&#8211;2018 &#8594; 2019) is NOT a tuning fold — that role is</text>
+  <text x="62" y="603" class="b">the winner refit (pool) + the gated blind (16)</text>
+  <text x="48" y="632" class="bi" fill="#4e7a34">the blind store never enters the search — CV and single-split values never share a study</text>
+
+  <!-- 12 MDS -->
+  <rect x="750" y="400" width="690" height="250" rx="10" fill="#ecf1fb" stroke="#3f5fa9" stroke-width="2.5"/>
+  <text x="768" y="430" class="bt" fill="#2f4d92">12 · MOSAICML STREAMING (MDS) — SEQUENCE STORE</text>
+  <text x="768" y="458" class="b">• SequenceWindowStore builds per-tail windows(K) once per (stage, fold, K)</text>
+  <text x="782" y="477" class="b">&#8594; MDS shards on DBFS · bounded driver memory, no full collect</text>
+  <text x="768" y="500" class="b">• StreamingDataset feeds every rank — shards resolved per rank, not broadcast</text>
+  <text x="768" y="523" class="b">• stores are WRITE-ONCE + skip-guard, versioned by MDS_TAG; nothing deletes</text>
+  <text x="768" y="546" class="b">• TRAIN_EPOCH_SIZE caps the epoch &#8594; denser pruning checkpoints, less work</text>
+  <text x="782" y="565" class="b">lost per spot preemption</text>
+  <text x="768" y="588" class="b">• &#957; scaling (DeepAR &#167;3.3): gap channel &#247; per-tail TRAIN-range mean gap</text>
+  <text x="768" y="617" class="bi" fill="#2f4d92">the loader is the seam — resampling, epoch size and scale all live here</text>
+
+  <!-- 13 CLASS IMBALANCE -->
+  <rect x="1470" y="400" width="700" height="250" rx="10" fill="#fdf6da" stroke="#cfa93a" stroke-width="2.5"/>
+  <text x="1488" y="430" class="bt" fill="#8a6d1a">13 · CLASS IMBALANCE — EITHER / OR (NEVER BOTH)</text>
+  <rect x="1488" y="446" width="316" height="86" rx="8" fill="#ffffff" stroke="#cfa93a" stroke-width="1.4"/>
+  <text x="1502" y="468" class="b" font-weight="700">EITHER — UNDERSAMPLING</text>
+  <text x="1502" y="490" class="bp">• XGBoost · MLP · Log Reg</text>
+  <text x="1502" y="509" class="bp">• majority downsampled before the fit;</text>
+  <text x="1514" y="526" class="bp">plain log loss / CE objective</text>
+  <text x="1822" y="497" class="orlbl" text-anchor="middle">OR</text>
+  <rect x="1852" y="446" width="304" height="86" rx="8" fill="#ffffff" stroke="#cfa93a" stroke-width="1.4"/>
+  <text x="1866" y="468" class="b" font-weight="700">OR — FOCAL LOSS</text>
+  <text x="1866" y="490" class="bp">• XGBoost (focal) · LSTM</text>
+  <text x="1866" y="509" class="bp">• &#945;_t + per-class &#947; (length 2);</text>
+  <text x="1878" y="526" class="bp">class prior enters via the bias / margin</text>
+  <text x="1488" y="558" class="b">• LSTM lane only: proportional under/over-sampling at the loader —</text>
+  <text x="1502" y="577" class="b">STREAM_PROPORTIONS [0.70, 0.30] mixes the streams to a chosen rate</text>
+  <text x="1488" y="600" class="b">• resample XOR &#945; — the focal bias init derives from the SAME proportions,</text>
+  <text x="1502" y="619" class="b">so the model's prior always matches the stream it actually sees</text>
+  <text x="1488" y="641" class="bi" fill="#8a6d1a">one correction per lane — never two dials fixing the same imbalance</text>
+
+  <!-- verticals B -> container -->
+  <line x1="375" y1="650" x2="375" y2="682" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+  <line x1="1095" y1="650" x2="1095" y2="682" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+  <line x1="1820" y1="650" x2="1820" y2="682" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+
+  <!-- ===================== 14 MODEL PLATES ===================== -->
+  <rect x="30" y="690" width="2140" height="470" rx="10" fill="#fdf6ec" stroke="#b5762a" stroke-width="2.5"/>
+  <path d="M30,700 a10,10 0 0 1 10,-10 h2120 a10,10 0 0 1 10,10 v36 h-2140 z" fill="#b5762a"/>
+  <text x="52" y="720" class="hdr">14 · TRIAL EXECUTION — MODEL PLATES  (CORE OF PHASE 3)</text>
+  <text x="2148" y="720" class="hdr2" text-anchor="end">&#10227; repeated &#215; N_TRIALS per study · &#215; folds per trial · one study per model</text>
+  <text x="52" y="758" class="bi">binary throughout (C = 2) — each plate names its own objective and its own imbalance lever; team_focal v1.5 is the single focal seam</text>
+
+  <!-- plate 1: LOG REG -->
+  <rect x="55" y="772" width="500" height="288" rx="8" fill="#ecf1fb" stroke="#3f5fa9" stroke-width="1.8"/>
+  <text x="71" y="799" class="bt" font-size="14.5" fill="#2f4d92">LOG REG — LOG LOSS</text>
+  <rect x="437" y="784" width="104" height="20" rx="10" fill="#e9eefb" stroke="#3f5fa9" stroke-width="1.4"/>
+  <text x="489" y="798" class="pill" fill="#2f4d92" text-anchor="middle">DISTRIBUTED</text>
+  <text x="71" y="828" class="bp">• Spark MLlib LogisticRegression on the assembled frame —</text>
+  <text x="83" y="845" class="bp">executors train (true cluster training)</text>
+  <text x="71" y="866" class="bp">• objective: plain log loss — NO focal hook in this lane</text>
+  <text x="71" y="887" class="bp">• imbalance lever: UNDERSAMPLING of the majority class</text>
+  <text x="71" y="908" class="bp">• search: Hyperopt (TPE) — MLlib-native, no custom seam</text>
+  <text x="71" y="929" class="bp">• numeric block: impute &#8594; assemble &#8594; standardize</text>
+  <text x="71" y="950" class="bp">• decision: P(delayed) &#8594; tuned threshold &#964;</text>
+  <text x="71" y="985" class="bi" fill="#2f4d92">the interpretable baseline lane</text>
+
+  <!-- plate 2: XGBOOST -->
+  <rect x="575" y="772" width="500" height="288" rx="8" fill="#f9ecd9" stroke="#c99045" stroke-width="1.8"/>
+  <text x="591" y="799" class="bt" font-size="14.5" fill="#8a5a1e">XGBOOST — FOCAL  |  WEIGHTED CE</text>
+  <rect x="957" y="784" width="112" height="20" rx="10" fill="#fdf3e3" stroke="#b5762a" stroke-width="1.4"/>
+  <text x="1013" y="798" class="pill" fill="#8a5a1e" text-anchor="middle">SINGLE DRIVER</text>
+  <text x="591" y="828" class="bp">• FOCAL variant — custom objective + base_margin on the</text>
+  <text x="603" y="845" class="bp">driver; natural rate, NO resampling (prior in the bias)</text>
+  <text x="591" y="866" class="bp">• WEIGHTED-CE variant — undersampled majority, plain</text>
+  <text x="603" y="883" class="bp">weighted cross-entropy, Hyperopt search on MLlib</text>
+  <text x="591" y="904" class="bp">• eval_metric: macro F2 / f2_c1 on margins (cfg.predict)</text>
+  <text x="591" y="925" class="bp">• tree_method hist · live curve logger every 5 rounds</text>
+  <text x="591" y="946" class="bp">• pruning key discovered from the val eval set</text>
+  <text x="591" y="985" class="bi">two objectives, one architecture — the controlled loss comparison</text>
+
+  <!-- plate 3: MLP -->
+  <rect x="1095" y="772" width="500" height="288" rx="8" fill="#ecf1fb" stroke="#3f5fa9" stroke-width="1.8"/>
+  <text x="1111" y="799" class="bt" font-size="14.5" fill="#2f4d92">MLP — SOFTMAX CE</text>
+  <rect x="1477" y="784" width="104" height="20" rx="10" fill="#e9eefb" stroke="#3f5fa9" stroke-width="1.4"/>
+  <text x="1529" y="798" class="pill" fill="#2f4d92" text-anchor="middle">DISTRIBUTED</text>
+  <text x="1111" y="828" class="bp">• Spark ML MultilayerPerceptronClassifier — executors</text>
+  <text x="1123" y="845" class="bp">train (true cluster training) · softmax cross-entropy</text>
+  <text x="1111" y="866" class="bp">• no focal hook — no custom-loss seam in MLPC</text>
+  <text x="1111" y="887" class="bp">• imbalance lever: UNDERSAMPLING of the majority class</text>
+  <text x="1111" y="908" class="bp">• numeric block: impute &#8594; assemble &#8594; standardize</text>
+  <text x="1111" y="929" class="bp">• honestly unpruned (no mid-fit hook);</text>
+  <text x="1123" y="946" class="bp">objectiveHistory logged after the fit</text>
+  <text x="1111" y="967" class="bp">• output layer = 2</text>
+  <text x="1111" y="1000" class="bi" fill="#2f4d92">honest CE comparison lane</text>
+
+  <!-- plate 4: LSTM -->
+  <rect x="1615" y="772" width="500" height="288" rx="8" fill="#ecf1fb" stroke="#3f5fa9" stroke-width="1.8"/>
+  <text x="1631" y="799" class="bt" font-size="14.5" fill="#2f4d92">LSTM — FOCAL LOSS (MDS)</text>
+  <rect x="1997" y="784" width="104" height="20" rx="10" fill="#e9eefb" stroke="#3f5fa9" stroke-width="1.4"/>
+  <text x="2049" y="798" class="pill" fill="#2f4d92" text-anchor="middle">DISTRIBUTED</text>
+  <text x="1631" y="828" class="bp">• variants: lstm_standard (1 layer, Adam) ·</text>
+  <text x="1643" y="845" class="bp">lstm_stacked (3 layers, AdamW)</text>
+  <text x="1631" y="866" class="bp">• TorchDistributor = launcher, not trainer — Spark seats</text>
+  <text x="1643" y="883" class="bp">N ranks &#8594; torch.distributed (gloo | nccl)</text>
+  <text x="1631" y="904" class="bp">• StreamingDataset shards MDS windows per rank;</text>
+  <text x="1643" y="921" class="bp">DDP all-reduces gradients every step</text>
+  <text x="1631" y="942" class="bp">• imbalance lever: proportional stream resampling —</text>
+  <text x="1643" y="959" class="bp">focal bias init derives from the same vector</text>
+  <text x="1631" y="980" class="bp">• rank-0: epoch eval &#8594; DBFS pruning channel (STOP);</text>
+  <text x="1643" y="997" class="bp">state_dict &#8594; driver rebuild + val scoring</text>
+  <text x="1631" y="1018" class="bp">• head width = 1 logit (binary)</text>
+  <text x="1631" y="1045" class="bi" fill="#2f4d92">the sequence lane — per-tail rotation chains</text>
+
+  <!-- per-trial strip -->
+  <rect x="55" y="1078" width="2060" height="62" rx="8" fill="#fdf1de" stroke="#d8b078" stroke-width="1.2"/>
+  <text x="75" y="1103" class="b">per trial, every plate:  space(trial) &#8594; loss cfg (&#945;_t · per-class &#947;, length 2 — focal lanes only) &#8594; fit ONCE PER FOLD (11) &#8594; Evaluator.suite (weighted F2 · macro F2 · c0 · c1) per fold</text>
+  <text x="75" y="1125" class="b">&#8594; MEAN drive value across folds &#8594; nested MLflow run (params · live curves · suite · loss cfg) &#8594; returned to the search — TPE learns, Hyperband prunes</text>
+
+  <!-- container -> 15 -->
+  <line x1="420" y1="1160" x2="420" y2="1192" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+  <text x="432" y="1182" class="lbl">suite · fold means · Best3 · live curves</text>
+
+  <!-- ===================== ROW D ===================== -->
+  <!-- 15 EVALUATION & SELECTION -->
+  <rect x="30" y="1200" width="780" height="250" rx="10" fill="#f9ecd9" stroke="#b5762a" stroke-width="2"/>
+  <text x="48" y="1230" class="bt" fill="#8a5a1e">15 · EVALUATION &amp; SELECTION</text>
+  <text x="48" y="1258" class="b">• Evaluator suite: weighted F2 · macro F2 · per-class c0 | c1 (binary contract)</text>
+  <text x="48" y="1277" class="b">• Best3 tracker per study &#8594; trial leaderboard (storage-discovered — every STUDY_TAG appears)</text>
+  <text x="48" y="1296" class="b">• winner refit on the pool = last fold's train + val (2015&#8211;2018) before anything blind</text>
+  <text x="48" y="1315" class="b">• threshold &#964; chosen on the pool validation split (2018 natural rate):</text>
+  <text x="62" y="1334" class="b">max f2_c1 subject to f2_c0 &#8805; 0.80 — frozen BEFORE the blind is touched</text>
+  <text x="48" y="1353" class="b">• persist: pytorch / native booster / spark flavor + raw-bias artifact + PREDICT_NOTE &#8594; MLflow</text>
+  <text x="48" y="1372" class="b">• acceptance gate: reload from MLflow must reproduce the logged value (tol 1e-6)</text>
+  <text x="48" y="1404" class="bi">every trial also lands as a row in the experiment log — module 6's table, continued</text>
+
+  <!-- 16 BLIND -->
+  <rect x="860" y="1200" width="520" height="250" rx="10" fill="#f9ecd9" stroke="#b5762a" stroke-width="3.5"/>
+  <text x="878" y="1230" class="bt" fill="#8a5a1e">16 · BLIND — GATED (SCORED ONCE)</text>
+  <text x="878" y="1258" class="b">• opens only when RUN_BLIND = True and STAGE is</text>
+  <text x="892" y="1277" class="b">"1y" (Q4 2015) or "5y" (2019)</text>
+  <text x="878" y="1296" class="b">• winner scored once per lane, at the frozen &#964;</text>
+  <text x="878" y="1315" class="b">• TRAIN-fitted artifacts only (indexer · medians · &#956;/&#963; · &#957;)</text>
+  <text x="878" y="1334" class="b">• the blind year is never a CV fold — it never touches</text>
+  <text x="892" y="1353" class="b">tuning, spaces, folds, or selection</text>
+  <text x="878" y="1390" class="bi">the Phase 2 lock, finally consumed</text>
+
+  <!-- FINAL -->
+  <rect x="1430" y="1200" width="740" height="250" rx="10" fill="#f9ecd9" stroke="#b5762a" stroke-width="2"/>
+  <path d="M1430,1210 a10,10 0 0 1 10,-10 h720 a10,10 0 0 1 10,10 v34 h-740 z" fill="#b5762a"/>
+  <text x="1450" y="1228" class="hdr">FINAL — PHASE 3 DELIVERABLE</text>
+  <text x="1450" y="1272" class="b">• selected model + tuned config (study winner, refit on the pool)</text>
+  <text x="1450" y="1291" class="b">• frozen operating point &#964; + the decision rule it encodes</text>
+  <text x="1450" y="1310" class="b">• full experiment table — MLflow runs + experiment-log rows</text>
+  <text x="1450" y="1329" class="b">• per-fold and mean CV values — the generalization evidence</text>
+  <text x="1450" y="1348" class="b">• blind metrics — reported exactly once</text>
+  <text x="1450" y="1367" class="b">• report + presentation hand-off (metric tables · figures · runtime per model)</text>
+  <text x="1450" y="1404" class="bi">opened by the champion baseline from module 5 — closed by the blind gate</text>
+
+  <!-- row D arrows -->
+  <line x1="810" y1="1325" x2="852" y2="1325" stroke="#4a4a4a" stroke-width="2" marker-end="url(#mGray)"/>
+  <text x="800" y="1306" class="lbl" text-anchor="end">winner refit + &#964;</text>
+  <line x1="1380" y1="1325" x2="1420" y2="1325" stroke="#b5762a" stroke-width="6" marker-end="url(#mBrown)"/>
+  <text x="1400" y="1306" class="lbl" text-anchor="middle">blind metrics — once</text>
+
+  <!-- iterate loop -->
+  <path d="M110,1450 L110,1474 L2195,1474 L2195,96 L700,96 L700,112" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#mDash)"/>
+  <text x="760" y="110" class="lbl">iterate — next rung: STAGE 3m &#8594; 1y &#8594; 5y · new STUDY_TAG (fresh study) · reshaped spaces · sampling policy</text>
+
+  <!-- ===================== RECONCILIATION ===================== -->
+  <rect x="30" y="1490" width="2140" height="170" rx="10" fill="#f4f4f4" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="52" y="1520" class="bt" fill="#555" font-size="14.5">RECONCILIATION — PHASE 2 SHEET &#8594; THIS SHEET</text>
+  <text x="52" y="1548" class="b">• module 5 (champion + focal design) &#8594; entry (7) · model plates (14)</text>
+  <text x="52" y="1571" class="b">• module 6 (F2 contract, experiment table) &#8594; Evaluator suite + experiment log (15)</text>
+  <text x="52" y="1594" class="b">• "HPO platform: Optuna or W&amp;B" &#8594; Optuna TPE + Hyperband (LSTM) · Hyperopt on MLlib (Log Reg, XGBoost) (10)</text>
+  <text x="52" y="1617" class="b">• "MLP + advanced models" &#8594; MLP · LSTM (14)</text>
+  <text x="52" y="1640" class="b">• "cross-validation" &#8594; expanding year folds, mean drive across folds (11)</text>
+  <text x="1130" y="1548" class="b">• "class imbalance strategy" &#8594; either/or block: undersampling XOR focal (13)</text>
+  <text x="1130" y="1571" class="b">• "model selection" &#8594; Best3 &#8594; refit &#8594; &#964; &#8594; acceptance (15)</text>
+  <text x="1130" y="1594" class="b">• "full-scale training" &#8594; staged rungs 3m &#8594; 1y &#8594; 5y (8&#8211;16) on MDS streaming (12)</text>
+  <text x="1130" y="1617" class="b">• "blind evaluation" &#8594; blind gate (16) — once</text>
+  <text x="1130" y="1640" class="b">• checkpoint discipline &#8594; persistence strip (below)</text>
+
+  <!-- ===================== PERSISTENCE STRIP ===================== -->
+  <rect x="30" y="1690" width="2140" height="90" rx="10" fill="#fdf6da" stroke="#cfa93a" stroke-width="2"/>
+  <text x="52" y="1722" class="stripT">PERSISTENCE DISCIPLINE (PHASE 3 OBJECTIVE)</text>
+  <text x="52" y="1748" class="stripB">Persist after every stage — Optuna SQLite &#8594; timestamped team-store syncs (restart-proof) · MDS stores write-once under MDS_TAG, reused by skip-guard · MLflow: params + live curves + per-fold suite + loss cfg</text>
+  <text x="52" y="1770" class="stripB">· best-3 models + raw-bias artifacts + predict notes · frozen &#964; · experiment-log rows · all paths recorded in the report appendix</text>
+</svg>
