@@ -9,7 +9,7 @@ max_depth = 11
 min_child_weight = 17.96
 n_estimators = 277
 subsample = 0.888,	270 s,	0.758,	0.6494,	0.8315 | 0.4672,	-0.0735,	0.0515
-E15,	LSTM,	Focal loss,	Binary,	Q1 to Q3 2015,	Q4 2015,	0.859,	0.4984,	0.971 | 0.026,	"alpha = 0.3745
+E15,	LSTM,	Focal loss,	Binary,	Q1 to Q3 2015,	Q4 2015,	0.859,	0.4984,	0.971 | 0.026,	alpha = 0.3745
 gamma c0 = 13.487
 gamma c1 = 6.320
 k = 5
@@ -17,7 +17,7 @@ hidden = 32
 layers = 2
 learning rate = 0.0002
 batch size = 8192
-epochs = 9",	1320 s,	TBD,	TBD,	TBD,	TBD,	TBD,
+epochs = 9,	1320 s,	TBD,	TBD,	TBD,	TBD,	TBD,
 E20,"LSTM (torch, MDS streaming)","Focal loss (per-class gamma, alpha from stream priors)",Binary,2015 to 2018 (expanding CV),2019,4127 s,0.5175,0.03,0.7484,0.663,0.7992,0.5269,0.0094
 E22,MLP 1 layer,Cross entropy loss,Binary,2015 to 2018 (expanding CV),2019,174.6 s,0.5742,0.02,0.7505,0.6859,0.7878,0.5841,0.0099
 E23,MLP 2 layers,Cross entropy loss,Binary,2015 to 2018 (expanding CV),2019,367.9 s,0.5741,0.02,0.7572,0.6891,0.7966,0.5817,0.0076
